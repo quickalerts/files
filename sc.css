@@ -1,0 +1,222 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the table */
+table {
+  width: 98%;
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Semi-transparent border */
+  max-width: 100%;
+  margin: 20px auto;
+  background: #ffffff; /* White background */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style table headers */
+th {
+  padding: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  color: #000000; /* Black text */
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Set text alignment to left for specified table headers */
+th[colspan="2"] {
+  text-align: left;
+}
+
+/* Style table cells */
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  color: #000000; /* Black text */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Style select dropdowns */
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-size: 14px;
+  color: #000000; /* Black text */
+  background: #f9f9f9; /* Light grey background */
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus {
+  border-color: #4caf50; /* Green outline */
+  box-shadow: 0 0 5px #4caf50;
+}
+
+/* Style input fields */
+input[type="number"],
+input[type="text"] {
+  width: calc(100% - 14px); /* Adjusting for padding */
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-size: 14px;
+  color: #000000; /* Black text */
+  background: #f9f9f9; /* Light grey background */
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  border-color: #3498db; /* Blue outline */
+  box-shadow: 0 0 5px #3498db;
+}
+
+/* Style the div containing input fields */
+#allowancesContainer div,
+#deductionsContainer div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Style buttons within input groups */
+.removeAllowance,
+.removeDeduction {
+  margin-left: 8px;
+  padding: 6px 9px;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #ff4e50, #f9d423);
+  color: #ffffff; /* White text */
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover effect for remove buttons */
+.removeAllowance:hover,
+.removeDeduction:hover {
+  background: linear-gradient(135deg, #e52d27, #b31217);
+  transform: scale(1.05);
+}
+
+/* Style output cells */
+#basicPayOutput,
+#daOutput,
+#hraOutput,
+#taOutput,
+#SecretariatAllowanceOutput,
+#ccaOutput,
+#maOutput,
+#allowancesOutput,
+#deductionsOutput,
+#gross,
+#SubscriptionOutput,
+#DeductionsOutput,
+#netSalaryOutput {
+  text-align: right;
+  font-weight: bold;
+  color: #000000; /* Black text */
+}
+
+/* Specific styles for Subscription and Deductions output */
+#SubscriptionOutput {
+  color: #388e3c; /* Green */
+}
+
+#DeductionsOutput {
+  color: #8b4513; /* Saddle brown */
+}
+
+/* Style for the buttons row */
+#buttons-row {
+  text-align: center;
+}
+
+/* Style for the buttons within the cell */
+#buttons-row button {
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  color: #ffffff; /* White text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+#buttons-row button:hover {
+  background: linear-gradient(135deg, #2980b9, #27ae60);
+  transform: translateY(-2px);
+}
+
+/* Specific styles for the Calculate Net Salary button */
+button {
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #4caf50, #16a085);
+  color: #ffffff; /* White text */
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effect for Calculate Net Salary button */
+button:hover {
+  background: linear-gradient(135deg, #388e3c, #13856b);
+  transform: translateY(-2px);
+}
+
+/* Style for the addDeduction button */
+#addDeduction {
+  padding: 8px 16px;
+  margin: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #f39c12, #e74c3c);
+  color: #ffffff; /* White text */
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Button hover effect for addDeduction button */
+#addDeduction:hover {
+  background: linear-gradient(135deg, #d35400, #c0392b);
+  transform: scale(1.05);
+}
+
+/* Style for the addAllowance button */
+#addAllowance {
+  padding: 8px 16px;
+  margin: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #2ecc71, #1abc9c);
+  color: #ffffff; /* White text */
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Button hover effect for addAllowance button */
+#addAllowance:hover {
+  background: linear-gradient(135deg, #27ae60, #16a085);
+  transform: scale(1.05);
+}
