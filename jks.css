@@ -1,4 +1,4 @@
-/* Reset default margin and padding */ 
+/* Reset default margin and padding */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
@@ -8,16 +8,24 @@ body, h1, h2, h3, p, ul, li {
   table {
     width: 98%;
     border-collapse: collapse;
-    border: 1px solid #000; /* Black border */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Semi-transparent border */
     max-width: 100%;
     margin: 20px auto;
+    background: #ffffff; /* White background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
   /* Style table headers */
   th {
-    padding: 8px;
-    border-bottom: 1px solid #000; /* Black border */
-    font-size: 15px; /* Adjust as needed */
+    padding: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    color: #000000; /* Black text */
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   /* Set text alignment to left for specified table headers */
@@ -27,29 +35,50 @@ body, h1, h2, h3, p, ul, li {
   
   /* Style table cells */
   td {
-    padding: 8px;
+    padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #000; /* Black border */
-    font-size: 17px; /* Adjust as needed */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    color: #000000; /* Black text */
+    font-family: 'Roboto', sans-serif;
   }
   
   /* Style select dropdowns */
   select {
     width: 100%;
-    padding: 6px;
-    border: 1px solid #ccc; /* Light grey border */
-    border-radius: 4px;
-    font-size: 14px; /* Adjust as needed */
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    font-size: 14px;
+    color: #000000; /* Black text */
+    background: #f9f9f9; /* Light grey background */
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  select:focus {
+    border-color: #4caf50; /* Green outline */
+    box-shadow: 0 0 5px #4caf50;
   }
   
   /* Style input fields */
   input[type="number"],
   input[type="text"] {
-    width: calc(100% - 12px); /* Adjusting for padding */
-    padding: 6px;
-    border: 1px solid #ccc; /* Light grey border */
-    border-radius: 4px;
-    font-size: 14px; /* Adjust as needed */
+    width: calc(100% - 14px); /* Adjusting for padding */
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    font-size: 14px;
+    color: #000000; /* Black text */
+    background: #f9f9f9; /* Light grey background */
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  input:focus {
+    border-color: #3498db; /* Blue outline */
+    box-shadow: 0 0 5px #3498db;
   }
   
   /* Style output cells */
@@ -66,56 +95,99 @@ body, h1, h2, h3, p, ul, li {
   #DeductionsOutput,
   #netSalaryOutput {
     text-align: right;
+    font-weight: bold;
+    color: #000000; /* Black text */
   }
   
   /* Specific styles for Subscription and Deductions output */
   #SubscriptionOutput {
-    color: green; /* Subscription output color */
+    color: #388e3c; /* Green */
   }
   
   #DeductionsOutput {
-    color: darkbrown; /* Deductions output color */
+    color: #8b4513; /* Saddle brown */
   }
   
   /* Style for the buttons row */
   #buttons-row {
-    text-align: center; /* Center align buttons */
+    text-align: center;
   }
   
   /* Style for the buttons within the cell */
   #buttons-row button {
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 12px 24px;
+    margin: 8px;
     font-size: 16px;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
-    background-color: #3498db; /* Primary button color */
-    color: #fff; /* Text color */
-    transition: background-color 0.3s; /* Smooth transition */
+    border-radius: 6px;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: #ffffff; /* White text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.2s;
   }
   
   /* Button hover effect */
   #buttons-row button:hover {
-    background-color: #2980b9; /* Darker shade for hover effect */
+    background: linear-gradient(135deg, #2980b9, #27ae60);
+    transform: translateY(-2px);
   }
   
   /* Specific styles for the Calculate Net Salary button */
   button {
-    padding: 10px 20px; /* Button padding */
-    margin: 5px; /* Margin between buttons */
-    font-size: 16px; /* Button font size */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #2ecc71; /* Green background color */
-    color: #fff; /* White text color */
-    transition: background-color 0.3s; /* Transition for hover effect */
+    padding: 12px 24px;
+    margin: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #4caf50, #16a085);
+    color: #ffffff; /* White text */
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   /* Button hover effect for Calculate Net Salary button */
   button:hover {
-    background-color: #27ae60; /* Darker green for hover */
+    background: linear-gradient(135deg, #388e3c, #13856b);
+    transform: translateY(-2px);
   }
   
-    
+  /* Style for the addDeduction button */
+  #addDeduction {
+    padding: 8px 16px;
+    margin: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #f39c12, #e74c3c);
+    color: #ffffff; /* White text */
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  /* Button hover effect for addDeduction button */
+  #addDeduction:hover {
+    background: linear-gradient(135deg, #d35400, #c0392b);
+    transform: scale(1.05);
+  }
+  
+  /* Style for the addAllowance button */
+  #addAllowance {
+    padding: 8px 16px;
+    margin: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #2ecc71, #1abc9c);
+    color: #ffffff; /* White text */
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  /* Button hover effect for addAllowance button */
+  #addAllowance:hover {
+    background: linear-gradient(135deg, #27ae60, #16a085);
+    transform: scale(1.05);
+  }
+  
